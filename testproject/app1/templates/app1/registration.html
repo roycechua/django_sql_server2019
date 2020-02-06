@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accounts Registration Page</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/register/" method="POST">
+        {% csrf_token %}
+        <label for="account_id">ID: </label>
+        <input type="text" placeholder="Enter ID" id="account_id" name="account_id" required/>
+        <label for="name">Name: </label>
+        <input type="text" placeholder="Enter Name" id="name" name="name" required/>
+        <label for="email">Email: </label>
+        <input type="email" placeholder= "Enter Email" id="email" name="email" required/>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

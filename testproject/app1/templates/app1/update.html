@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Page</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="/update/{{ record.id }}" method="POST">
+        {% csrf_token %}
+        <label for="name">Name: </label>
+        <input type="text" placeholder="Name" id="name" name="name" value="{{ record.name }}" required/>
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Name" id="email" name="email" value="{{ record.email }}" required/>
+        <input type="submit" value="Register">
+    </form>
+    
+</body>
+</html>
